@@ -1,0 +1,24 @@
+{
+  "name": "frontframework",
+  "version": "0.1.0",
+  "description": "npm install bower gulp main-bower-files gulp-uglify gulp-rename gulp-util gulp-less",
+  "main": "web/index.html",
+  "dependencies": {
+    "bower": "~1.7.0",
+    "fs": "0.0.2",
+    "globule": "^0.2.0",
+    "gulp": "~3.9.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-header": "^1.7.1",
+    "gulp-less": "~3.0.5",
+    "gulp-uglify": "~1.5.1",
+    "gulp-util": "~3.0.7",
+    "main-bower-files": "~2.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emile PREVOT",
+  "license": "MIT"
+}

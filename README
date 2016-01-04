@@ -1,0 +1,22 @@
+# Steep 1
+npm install
+
+# Steep 2
+./node_modules/bower/bin/bower install
+
+# Steep 3
+./node_modules/gulp/bin/gulp.js
+
+# Steep 4
+# Remove the helloBundle example
+
+# Steep 5
+# Write your application. :)
+
+=====
+
+# Steep 3 (For prod)
+./node_modules/gulp/bin/gulp.js --prod
+
+# If you need to install other web dependencies
+npm install grunt-wow --save # And go to Steep 3

@@ -1,0 +1,26 @@
+{
+  "name": "frontframework",
+  "authors": [
+    "Emile Prevot"
+  ],
+  "description": "super project",
+  "main": "web/index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.6",
+    "backbone": "~1.2.3",
+    "handlebars": "~4.0.5"
+  }
+}
