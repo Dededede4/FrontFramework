@@ -9,6 +9,7 @@ var util = require('gulp-util');
 var less = require('gulp-less');
 var header = require('gulp-header');
 var clean = require('gulp-clean');
+var minifyCss = require('gulp-minify-css');
 
 var paths = {
     htmlBundles: 'src/**/Ressources/views/*.html',
@@ -53,7 +54,7 @@ gulp.task('js', function () {
     jsFiles.push(paths.jsApp);
     jsFiles.push(paths.jsBundles);
 
-    var p = gulp.src(jsFiles) // Reverse for fix dependencies order
+    var p = gulp.src(jsFiles)
                 .pipe(concat('app.js'))
                 .pipe(header(jsArrayViews(), false))
                 ;
@@ -77,10 +78,14 @@ gulp.task('styles', ['js'], function () {
     files.push(paths.cssApp);
     files.push(paths.cssBundles);
 
-    return gulp.src(files)
+    var p = gulp.src(files)
         .pipe(less())
-        .pipe(concat('app.css'))
-        .pipe(gulp.dest('web/app/css'));
+        .pipe(concat('app.css'));
+    if (util.env.prod){ // gulp --prod
+        p.pipe(minifyCss({keepSpecialComments : 0}));
+    }
+    p.pipe(gulp.dest('web/app/css'));
+    return p;
 });
 
 gulp.task('clean', function(){
